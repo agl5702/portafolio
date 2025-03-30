@@ -1,15 +1,18 @@
-import { useState } from 'react'
+import { useState, Suspense, lazy } from 'react'
 import './App.css'
-import Header from './components/layout/header'
-import Home from './pages/home'
+
+// 🔹 Importaciones dinámicas (Lazy Loading)
+const Header = lazy(() => import('./components/layout/header'))
+const Home = lazy(() => import('./pages/home'))
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <Header/>
-      <Home/>  
-    </>
+    <Suspense fallback={<div>Cargando...</div>}>
+      <Header />
+      <Home />
+    </Suspense>
   )
 }
 
