@@ -56,15 +56,15 @@ export default defineConfig({
     },
   },
   build: {
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes("node_modules")) {
-            return id.includes("react") ? "react-vendor" : "vendor";
-          }
-        },
-      },
-    },
+    // rollupOptions: {
+    //   output: {
+    //     manualChunks(id) {
+    //       if (id.includes("node_modules")) {
+    //         return id.includes("react") ? "react-vendor" : "vendor";
+    //       }
+    //     },
+    //   },
+    // },
     chunkSizeWarningLimit: 500, // Evita advertencias en la consola
   },
 });
