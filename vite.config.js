@@ -1,9 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import path from "path";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
+  base: "/", // Asegura rutas correctas en producción
   plugins: [
     react(),
     VitePWA({
@@ -36,10 +36,7 @@ export default defineConfig({
             handler: "CacheFirst",
             options: {
               cacheName: "images-cache",
-              expiration: {
-                maxEntries: 50,
-                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 días
-              },
+              expiration: { maxEntries: 50, maxAgeSeconds: 30 * 24 * 60 * 60 },
             },
           },
           {
@@ -47,9 +44,7 @@ export default defineConfig({
               request.destination === "script" ||
               request.destination === "style",
             handler: "StaleWhileRevalidate",
-            options: {
-              cacheName: "static-resources",
-            },
+            options: { cacheName: "static-resources" },
           },
         ],
       },
@@ -57,7 +52,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"),
+      "@": "/src", // Alias corregido
     },
   },
   build: {
@@ -65,14 +60,11 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes("node_modules")) {
-            if (id.includes("react")) {
-              return "react-vendor"; // React y dependencias en un solo archivo
-            }
-            return "vendor"; // Otras librerías en otro archivo
+            return id.includes("react") ? "react-vendor" : "vendor";
           }
         },
       },
     },
-    chunkSizeWarningLimit: 500, // Opcional: Evita la advertencia de 500 KB
+    chunkSizeWarningLimit: 500, // Evita advertencias en la consola
   },
 });
