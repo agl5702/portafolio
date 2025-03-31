@@ -1,0 +1,9 @@
+@keyframes shakeXY {
+    0%, 100% { transform: translate(-10%, -10%); }
+    50% { transform: translate(10%, 10%); }
+  }
+  
+  .shake-icon {
+    animation: shakeXY 3s ease-in-out infinite;
+  }
+  
