@@ -1,9 +1,18 @@
 @keyframes shakeXY {
-    0%, 100% { transform: translate(-10%, -10%); }
-    50% { transform: translate(10%, 10%); }
+  0%, 100% { 
+      transform: translate(0, 0) scale(1.05); 
   }
-  
-  .shake-icon {
-    animation: shakeXY 3s ease-in-out infinite;
+  25% { 
+      transform: translate(-5%, -5%) scale(1.05); 
   }
-  
+  50% { 
+      transform: translate(5%, 5%) scale(1.06); 
+  }
+  75% { 
+      transform: translate(-5%, -5%) scale(1.05); 
+  }
+}
+
+.shake-icon {
+  animation: shakeXY 5s ease-in-out infinite;
+}

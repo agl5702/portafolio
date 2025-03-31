@@ -4,6 +4,8 @@ import './App.css'
 // 🔹 Importaciones dinámicas (Lazy Loading)
 const Header = lazy(() => import('./components/layout/header'))
 const Home = lazy(() => import('./pages/home'))
+const Tecnologias = lazy(() => import('./pages/tecnologias'))
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +14,7 @@ function App() {
     <Suspense fallback={<div>Cargando...</div>}>
       <Header />
       <Home />
+      <Tecnologias/>
     </Suspense>
   )
 }

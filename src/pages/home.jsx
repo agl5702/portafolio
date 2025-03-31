@@ -23,17 +23,12 @@ function Home() {
           Backend / Python Developer
         </Text>
         <Text fontSize="20px">
-          Soy un apasionado por la programación, que tiene como meta; 
-          superarme cada día con diferentes retos, mientras tomo una taza de café.
+          Apasionado por la programación y resolver bugs, mientras tomo una taza de café.
         </Text>
         <Button m="20px" w="180px" borderRadius="15px">Descarga</Button>
       </Box>
       <Box position="relative">
-        <Image src={img_angel} borderRadius="full" boxSize="500px" />
-        <Image src={img_python} className="shake-icon" style={{ ...iconStyle, top: "10%", left: "10%" }} />
-        <Image src={img_docker} className="shake-icon" style={{ ...iconStyle, top: "15%", right: "20%" }} />
-        <Image src={img_github} className="shake-icon" style={{ ...iconStyle, bottom: "20%", left: "20%" }} />
-        <Image src={img_aws} className="shake-icon" style={{ ...iconStyle, bottom: "20%", right: "25%" }} />
+        <Image src={img_angel} borderRadius="full" boxSize="450px" />
       </Box>
     </Box>
   );
