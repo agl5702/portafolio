@@ -6,13 +6,13 @@ function Header() {
   return (
     <Box className="container_header" borderBottom="2px solid transparent">
       <Box 
-        display="flex" 
+        display="flex"
         alignItems="center" 
         flexWrap="wrap"
         gap="1" 
         py="20px" 
         px="20px" 
-        flexDirection={{ base: "column", md: "row" }} 
+        flexDirection={{ base: "column",sm:'column', md: "column",lg:"row" }} 
         textAlign="center"
         justifyContent="center"  // Centrar todo el contenido
       >
@@ -23,9 +23,9 @@ function Header() {
           justifyContent="center"
           flex="1" // Para distribuir bien el espacio
         >
-          <Image w={{ base: "80px", md: "100px" }} src={avatar}></Image>
+          <Image  w={{ base: "80px", md: "100px" }} src={avatar}></Image>
           <Text 
-            fontSize={{ base: "30px", md: "45px" }}
+            fontSize={{ 'base':'25px','sm':'28px','md':'35px','lg':'45px'}}
             fontFamily="Oswald" 
             fontWeight="bold" 
             color="white"
@@ -45,26 +45,26 @@ function Header() {
           <List.Root 
             listStyle="none" 
             color="black" 
-            fontSize="22px" 
+            fontSize={{'base':'none','sm':'none','md':'18px','lg':'22px'}}
             fontWeight="bold"
-            display="flex" 
+            display={{'base':'none','sm':'none','md':'flex','lg':'flex'}}
             flexDirection={{ base: "column", md: "row" }} 
             alignItems="center"
           >
             <List.Item my={{ base: "10px", md: "0" }} mx="20px">
                 <Link outline="none" textUnderlineOffset="20px" textDecorationColor="blue.400"
-                href="/home" color="white">Inicio</Link>
+                href="#home" color="white">Inicio</Link>
             </List.Item>
-            <List.Item my={{ base: "10px", md: "0" }} mx="20px">
-                <Link outline="none" href="/tecnologias" textUnderlineOffset="20px"
+            <List.Item my={{ base: "10px", md: "0" }} mx={{base:"10px",lg:"20px"}}>
+                <Link outline="none" href="#tecnologias" textUnderlineOffset="20px"
                 textDecorationColor="blue.400" color="white">Tecnologías</Link>
             </List.Item>
             <List.Item my={{ base: "10px", md: "0" }} mx="20px">
-                <Link outline="none" href="/proyectos" textUnderlineOffset="20px"
+                <Link outline="none" href="#proyectos" textUnderlineOffset="20px"
                 textDecorationColor="blue.400" color="white">Proyectos</Link>
             </List.Item>
             <List.Item my={{ base: "10px", md: "0" }} mx="20px">
-                <Link outline="none" href="/proyectos  " textUnderlineOffset="20px" 
+                <Link outline="none" href="#contactos  " textUnderlineOffset="20px" 
                 textDecorationColor="blue.400" color="white">Contactos</Link>
             </List.Item>
           </List.Root>
@@ -79,11 +79,13 @@ function Header() {
           <Button 
             bg="blue.400" 
             color="white"
+            borderRadius="10px"
             px={{ base: "20px", md: "30px" }}
             py={{ base: "10px", md: "15px" }}
             fontSize={{ base: "16px", md: "18px" }}
+            display={{'base':'none','sm':'none','md':'none','lg':'flex'}}
           >
-            Descarga
+            Mi CV
           </Button>
         </Box>
       </Box>

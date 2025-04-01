@@ -8,10 +8,10 @@ import "./proyectos.css"
 
 function Proyectos() {
   return (
-    <Box p="20px" className="container_proyectos">
+    <Box id="proyectos" p="20px" className="container_proyectos">
         <Text textAlign="center" fontSize="32px">Desarrollo Web</Text>
         <Box >
-            <Box display="flex" justifyContent="center" flexWrap="wrap" gap="1">
+            <Box display="flex" justifyContent="center" flexWrap="wrap" gap="2">
                 <CardProyect image={ecco_img} title="EccoFullStack" 
                 description="Eccomerce con integración de pagos vía paypal - 
                 autenticación, api rest"
