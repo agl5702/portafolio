@@ -24,12 +24,7 @@ function Proyectos() {
                 badge1="Django" badge1_color="green" badge2="PostgreSQL" badge2_color="orange" 
                 badge3="TensorFlow" badge3_color="yellow" text_button="Ver más" link_button="https://keittweb.vercel.app/"
                 />
-                <CardProyect image={ecco_img} title="WebSpy" 
-                description="Herramienta webscraping para comparar precios y encontrar la mejor opción" 
-                badge1="FastAPI" badge1_color="blue"
-                badge2="Beatifoulsoup" badge2_color="purple" badge3="Pandas" badge3_color="green" 
-                text_button="Ver más" link_button="/"
-                />
+              
             </Box>
             <Text textAlign="center" fontSize="32px">Videojuegos</Text>
             <Box display="flex" justifyContent="center" flexWrap="wrap" gap="1">
