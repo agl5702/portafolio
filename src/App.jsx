@@ -5,7 +5,7 @@ import './App.css'
 const Header = lazy(() => import('./components/layout/header'))
 const Home = lazy(() => import('./pages/home'))
 const Tecnologias = lazy(() => import('./pages/tecnologias'))
-
+const Proyectos = lazy(() =>import ('./pages/proyectos'))
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +15,7 @@ function App() {
       <Header />
       <Home />
       <Tecnologias/>
+      <Proyectos/>
     </Suspense>
   )
 }

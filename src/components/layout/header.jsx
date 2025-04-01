@@ -4,7 +4,7 @@ import "./fonts.css";
 
 function Header() {
   return (
-    <Box bg="transparent" borderBottom="2px solid transparent">
+    <Box className="container_header" borderBottom="2px solid transparent">
       <Box 
         display="flex" 
         alignItems="center" 
