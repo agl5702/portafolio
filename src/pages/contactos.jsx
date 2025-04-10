@@ -5,7 +5,7 @@ import "./contactos.css"
 function Contactos() {
   return (
     <Box id="contactos" className="container_contactos" p="60px">
-        <Text textAlign="center" fontSize="32px">Contactos</Text>
+        <Text textAlign="center" color={{ 'base':'white','sm':'white','md':'white','lg':'white'}} fontSize="32px">Contactos</Text>
         <Box display="flex" justifyContent="center">
             <Link fontSize="55px" mx="10px" outline="none" textDecoration="none" href="https://github.com/agl5702">
                 <FaGithub/>

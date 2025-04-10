@@ -15,11 +15,11 @@ function tecnologias() {
 
     return (
     <Box id="tecnologias" className="container-tecnologias" textAlign="center" flexWrap="wrap" gap="1">
-        <Text fontSize="28px" fontWeight="bold"> Tecnologías</Text>
+        <Text fontSize="28px" fontWeight="bold" color={{ 'base':'white','sm':'white','md':'white','lg':'white'}}> Tecnologías</Text>
         <Box display="flex" alignItems="center" justifyContent="space-around" p="20px" flexWrap="wrap" gap="1" >
             
             <Box >
-                <Text fontSize="19px" fontWeight="bold">Backend</Text>
+                <Text fontSize="19px" color={{ 'base':'white','sm':'white','md':'white','lg':'white'}} fontWeight="bold">Backend</Text>
                 <Box>
                     
                     <Box display="flex" flexWrap="wrap" gap="1">

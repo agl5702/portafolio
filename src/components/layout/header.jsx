@@ -28,7 +28,7 @@ function Header() {
             fontSize={{ 'base':'25px','sm':'28px','md':'35px','lg':'45px'}}
             fontFamily="Oswald" 
             fontWeight="bold" 
-            color="white"
+            color={{ 'base':'white','sm':'white','md':'white','lg':'white'}}
             ml="10px"
             textShadow="2px 2px 5px rgba(0, 0, 0, 0.3)" // Sombra al texto
           >

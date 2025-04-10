@@ -16,15 +16,15 @@ function Home() {
     alignContent="center" justifyContent="center" position="relative">
       <Box p="20px" w={{'base':'360px','sm':'390px','md':'450px','lg':'500px'}} display="flex" flexDirection="column" m="auto" justifyContent="center">
         <Text fontSize={{'base':'25px','sm':'30px','md':'40px','lg':'50px'}} fontWeight="bold" color="yellow.300">Hola,</Text>
-        <Text fontSize={{'base':'35px','sm':'50px','md':'60px','lg':'75px'}} fontWeight="bold">soy Ángel</Text>
+        <Text color={{ 'base':'white','sm':'white','md':'white','lg':'white'}} fontSize={{'base':'35px','sm':'50px','md':'60px','lg':'75px'}} fontWeight="bold">soy Ángel</Text>
         <Text fontWeight="bold" fontSize={{'base':'16px','sm':'20px','md':'25px','lg':'28px'}} color="green.300">
           Backend / Python Developer
         </Text>
-        <Text textAlign="justify" fontSize={{'base':'16px','sm':'18px','md':'19px','lg':'20px'}}>
+        <Text textAlign="justify" color={{ 'base':'white','sm':'white','md':'white','lg':'white'}} fontSize={{'base':'16px','sm':'18px','md':'19px','lg':'20px'}}>
           Apasionado por la programación y resolver bugs,
           mientras tomo una taza de café.
         </Text>
-        <Button my="20px" w="160px" borderRadius="15px">Mi CV</Button>
+        <Button my="20px" w="160px" color={{ 'base':'black','sm':'black','md':'black','lg':'black'}} bgColor={{ 'base':'white','sm':'white','md':'white','lg':'white'}} borderRadius="15px">Mi CV</Button>
       </Box>
       <Box position="relative" m="auto" display="flex" justifyContent="center">
         <Image src={img_angel} borderRadius="full" boxSize={{'base':'150px','sm':'250px','md':'350px','lg':'450px'}} />

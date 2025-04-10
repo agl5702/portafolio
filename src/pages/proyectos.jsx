@@ -9,7 +9,7 @@ import "./proyectos.css"
 function Proyectos() {
   return (
     <Box id="proyectos" p="20px" className="container_proyectos">
-        <Text textAlign="center" fontSize="32px">Desarrollo Web</Text>
+        <Text textAlign="center" color={{ 'base':'white','sm':'white','md':'white','lg':'white'}} fontSize="32px">Desarrollo Web</Text>
         <Box >
             <Box display="flex" justifyContent="center" flexWrap="wrap" gap="2">
                 <CardProyect image={ecco_img} title="EccoFullStack" 
@@ -26,7 +26,7 @@ function Proyectos() {
                 />
               
             </Box>
-            <Text textAlign="center" fontSize="32px">Videojuegos</Text>
+            <Text textAlign="center" color={{ 'base':'white','sm':'white','md':'white','lg':'white'}} fontSize="32px">Videojuegos</Text>
             <Box display="flex" justifyContent="center" flexWrap="wrap" gap="1">
                 <CardProyect image={ppt_img} title="Piedra Papel o Tijeras" 
                 description="Juego de piedras papel o tijera"
