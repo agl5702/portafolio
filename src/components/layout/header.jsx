@@ -77,8 +77,11 @@ function Header() {
           flex="1" // Equilibrar espacio con el logo
         >
           <Button 
+            as="a"
             bg="blue.400" 
             color="white"
+            href="/cvangel.docx"
+            download="CV_Angel.docx"
             borderRadius="10px"
             px={{ base: "20px", md: "30px" }}
             py={{ base: "10px", md: "15px" }}

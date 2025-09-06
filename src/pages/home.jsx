@@ -24,7 +24,13 @@ function Home() {
           Apasionado por la programación y resolver bugs,
           mientras tomo una taza de café.
         </Text>
-        <Button my="20px" w="160px" color={{ 'base':'black','sm':'black','md':'black','lg':'black'}} bgColor={{ 'base':'white','sm':'white','md':'white','lg':'white'}} borderRadius="15px">Mi CV</Button>
+        <Button
+          as="a" 
+          href="/cvangel.docx"
+          download="CV_Angel.docx" my="20px" w="160px" 
+          color={{ 'base':'black','sm':'black','md':'black','lg':'black'}} 
+          bgColor={{ 'base':'white','sm':'white','md':'white','lg':'white'}} 
+          borderRadius="15px">Mi CV</Button>
       </Box>
       <Box position="relative" m="auto" display="flex" justifyContent="center">
         <Image src={img_angel} borderRadius="full" boxSize={{'base':'150px','sm':'250px','md':'350px','lg':'450px'}} />
