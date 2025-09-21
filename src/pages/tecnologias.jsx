@@ -30,7 +30,7 @@ function tecnologias() {
                 </Box>
             </Box>
             <Box>
-                <Text fontSize="19px" fontWeight="bold">Bases de datos</Text>
+                <Text fontSize="19px" color={{ 'base':'white','sm':'white','md':'white','lg':'white'}} fontWeight="bold">Bases de datos</Text>
                 <Box>
                     <Box display="flex" flexWrap="wrap" gap="1">
                         <Image w={{'base':'50px','sm':'65px','md':'80px','lg':'100px'}} _hover={{scale:"1.04"}} alt="mysql_logo" title="Mysql" mx="5px" src={mysql_img}/>
@@ -39,7 +39,7 @@ function tecnologias() {
                 </Box>
             </Box>
             <Box>
-                <Text fontSize="19px" fontWeight="bold">Infraestructura</Text>
+                <Text fontSize="19px" color={{ 'base':'white','sm':'white','md':'white','lg':'white'}} fontWeight="bold">Infraestructura</Text>
                 <Box>
                     <Box display="flex" flexWrap="wrap" gap="1">
                         <Image w={{'base':'50px','sm':'65px','md':'80px','lg':'100px'}} _hover={{scale:"1.04"}} alt="docker_logo" title="Docker" mx="5px" src={dokcer_img}/>
@@ -48,7 +48,7 @@ function tecnologias() {
                 </Box>
             </Box>
             <Box>
-                <Text fontSize="19px" fontWeight="bold">Pruebas</Text>
+                <Text fontSize="19px" color={{ 'base':'white','sm':'white','md':'white','lg':'white'}} fontWeight="bold">Pruebas</Text>
                 <Box>
                     <Box display="flex" flexWrap="wrap" gap="1">
                         <Image w={{'base':'50px','sm':'65px','md':'80px','lg':'100px'}} _hover={{scale:"1.04"}} alt="pytest_logo" title="Pytest" mx="5px" src={pytest_img}/>
