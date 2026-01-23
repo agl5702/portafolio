@@ -56,7 +56,7 @@ function Proyectos() {
             badge3="MySQL"
             badge3_color="yellow"
             text_button="Ver más"
-            link_button="https://github.com/agl5702/tienda-online-backend"
+            link_button="https://github.com/agl5702/tienda2"
           />
           <CardProyect
             image={lunalu11}
