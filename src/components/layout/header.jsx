@@ -1,96 +1,207 @@
-import { Box, Text, Image, List, Button, Link } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Image,
+  List,
+  Button,
+  Link,
+  HStack,
+} from "@chakra-ui/react";
+
 import avatar from "@/assets/avataro.png";
+
 import "./fonts.css";
 
 function Header() {
   return (
-    <Box className="container_header" borderBottom="2px solid transparent">
-      <Box 
+    <Box
+      position="fixed"
+      top="0"
+      left="0"
+      w="100%"
+      zIndex="999"
+      bg="rgba(5, 8, 22, 0.72)"
+      backdropFilter="blur(14px)"
+      borderBottom="1px solid rgba(255,255,255,0.06)"
+      boxShadow="0 10px 40px rgba(0,0,0,0.25)"
+    >
+      {/* BACKGROUND GLOW */}
+      <Box
+        position="absolute"
+        top="-80px"
+        right="-100px"
+        w="250px"
+        h="250px"
+        bg="blue.500"
+        opacity="0.12"
+        filter="blur(120px)"
+      />
+
+      <Box
+        position="absolute"
+        bottom="-120px"
+        left="-100px"
+        w="250px"
+        h="250px"
+        bg="purple.500"
+        opacity="0.1"
+        filter="blur(120px)"
+      />
+
+      <Box
+        maxW="1500px"
+        mx="auto"
         display="flex"
-        alignItems="center" 
-        flexWrap="wrap"
-        gap="1" 
-        py="20px" 
-        px="20px" 
-        flexDirection={{ base: "column",sm:'column', md: "column",lg:"row" }} 
-        textAlign="center"
-        justifyContent="center"  // Centrar todo el contenido
+        alignItems="center"
+        justifyContent="space-between"
+        px={{ base: "20px", md: "40px", lg: "70px" }}
+        py="18px"
+        position="relative"
+        zIndex={2}
       >
-        {/* Izquierda: Logo y Nombre */}
-        <Box 
-          display="flex" 
-          alignItems="center"  
-          justifyContent="center"
-          flex="1" // Para distribuir bien el espacio
-        >
-          <Image  w={{ base: "80px", md: "100px" }} src={avatar}></Image>
-          <Text 
-            fontSize={{ 'base':'25px','sm':'28px','md':'35px','lg':'45px'}}
-            fontFamily="Oswald" 
-            fontWeight="bold" 
-            color={{ 'base':'white','sm':'white','md':'white','lg':'white'}}
-            ml="10px"
-            textShadow="2px 2px 5px rgba(0, 0, 0, 0.3)" // Sombra al texto
-          >
-            AngelDev
-          </Text>
-        </Box>
 
-        {/* Centro: Menú (Ahora centrado correctamente) */}
-        <Box 
-          display="flex" 
-          justifyContent="center"
-          flex="2" // Asegura que el menú esté bien distribuido en el centro
-        >
-          <List.Root 
-            listStyle="none" 
-            color="black" 
-            fontSize={{'base':'none','sm':'none','md':'18px','lg':'22px'}}
-            fontWeight="bold"
-            display={{'base':'none','sm':'none','md':'flex','lg':'flex'}}
-            flexDirection={{ base: "column", md: "row" }} 
-            alignItems="center"
-          >
-            <List.Item my={{ base: "10px", md: "0" }} mx="20px">
-                <Link outline="none" textUnderlineOffset="20px" textDecorationColor="blue.400"
-                href="#home" color="white">Inicio</Link>
-            </List.Item>
-            <List.Item my={{ base: "10px", md: "0" }} mx={{base:"10px",lg:"20px"}}>
-                <Link outline="none" href="#tecnologias" textUnderlineOffset="20px"
-                textDecorationColor="blue.400" color="white">Tecnologías</Link>
-            </List.Item>
-            <List.Item my={{ base: "10px", md: "0" }} mx="20px">
-                <Link outline="none" href="#proyectos" textUnderlineOffset="20px"
-                textDecorationColor="blue.400" color="white">Proyectos</Link>
-            </List.Item>
-            <List.Item my={{ base: "10px", md: "0" }} mx="20px">
-                <Link outline="none" href="#contactos  " textUnderlineOffset="20px" 
-                textDecorationColor="blue.400" color="white">Contactos</Link>
-            </List.Item>
-          </List.Root>
-        </Box>
+        {/* LEFT */}
+        <HStack spacing={4}>
 
-        {/* Derecha: Botón */}
-        <Box 
-          display="flex" 
-          justifyContent="center"
-          flex="1" // Equilibrar espacio con el logo
+          {/* AVATAR GLOW */}
+          <Box position="relative">
+
+            <Box
+              position="absolute"
+              inset="-8px"
+              bg="green.300"
+              opacity="0.25"
+              filter="blur(20px)"
+              borderRadius="full"
+            />
+
+            <Image
+              src={avatar}
+              w={{ base: "60px", md: "72px" }}
+              borderRadius="full"
+              border="2px solid rgba(255,255,255,0.08)"
+              bg="rgba(255,255,255,0.04)"
+              backdropFilter="blur(10px)"
+              transition="0.3s"
+              _hover={{
+                transform: "scale(1.05)",
+              }}
+            />
+          </Box>
+
+          <Box>
+            <Text
+              fontSize={{
+                base: "24px",
+                md: "30px",
+                lg: "38px",
+              }}
+              fontFamily="Oswald"
+              fontWeight="bold"
+              color="white"
+              lineHeight="1"
+              letterSpacing="1px"
+            >
+              Angel
+              <Text
+                as="span"
+                color="green.300"
+                ml="3px"
+              >
+                Dev
+              </Text>
+            </Text>
+
+            <Text
+              color="gray.400"
+              fontSize={{
+                base: "11px",
+                md: "13px",
+              }}
+              letterSpacing="2px"
+            >
+              FULLSTACK DEVELOPER
+            </Text>
+          </Box>
+        </HStack>
+
+        {/* CENTER MENU */}
+        <List.Root
+          listStyle="none"
+          display={{
+            base: "none",
+            md: "flex",
+          }}
+          flexDirection="row"
+          alignItems="center"
+          gap="40px"
         >
-          <Button 
-            as="a"
-            bg="blue.400" 
-            color="white"
-            href="/cvangel.docx"
-            download="CV_Angel.docx"
-            borderRadius="10px"
-            px={{ base: "20px", md: "30px" }}
-            py={{ base: "10px", md: "15px" }}
-            fontSize={{ base: "16px", md: "18px" }}
-            display={{'base':'none','sm':'none','md':'none','lg':'flex'}}
-          >
-            Mi CV
-          </Button>
-        </Box>
+          {[
+            ["Inicio", "#home"],
+            ["Tecnologías", "#tecnologias"],
+            ["Proyectos", "#proyectos"],
+            ["Contactos", "#contactos"],
+          ].map(([label, href]) => (
+            <List.Item key={label}>
+              <Link
+                href={href}
+                color="gray.300"
+                fontWeight="600"
+                fontSize="16px"
+                position="relative"
+                textDecoration="none"
+                transition="0.3s"
+                _hover={{
+                  color: "green.300",
+                  textDecoration: "none",
+                }}
+                _after={{
+                  content: '""',
+                  position: "absolute",
+                  width: "0%",
+                  height: "2px",
+                  bg: "green.300",
+                  left: "0",
+                  bottom: "-6px",
+                  transition: "0.3s",
+                }}
+                sx={{
+                  "&:hover::after": {
+                    width: "100%",
+                  },
+                }}
+              >
+                {label}
+              </Link>
+            </List.Item>
+          ))}
+        </List.Root>
+
+        {/* RIGHT BUTTON */}
+        <Button
+          as="a"
+          href="/cvangel.docx"
+          download="CV_Angel.docx"
+          h="55px"
+          px="28px"
+          bg="green.300"
+          color="black"
+          fontWeight="bold"
+          borderRadius="18px"
+          display={{
+            base: "none",
+            lg: "flex",
+          }}
+          transition="0.3s"
+          _hover={{
+            transform: "translateY(-3px)",
+            bg: "green.200",
+            boxShadow:
+              "0 0 25px rgba(74, 222, 128, 0.35)",
+          }}
+        >
+          Download CV
+        </Button>
       </Box>
     </Box>
   );

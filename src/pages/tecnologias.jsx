@@ -1,66 +1,185 @@
-import { Box,Text,Image} from "@chakra-ui/react"
-import "./tecnologias.css"
-import python_img  from "@/assets/pyt.svg"
-import dj_img  from "@/assets/django.svg"
-// import pandas_img  from "@/assets/pandas.svg"
-import mysql_img from "@/assets/mysql.svg"
-import postgres_img from "@/assets/post.svg"
-import dokcer_img from "@/assets/dk.svg"
-import aws_img from "@/assets/aws.svg"
-import pytest_img from "@/assets/pytest.svg"
-import github_img from "@/assets/gh.svg"
-import fastapi_img from "@/assets/fastapi.svg"
+import { Box, Text, Image } from "@chakra-ui/react";
 
-function tecnologias() {
+import python_img from "@/assets/pyt.svg";
+import dj_img from "@/assets/django.svg";
+import mysql_img from "@/assets/mysql.svg";
+import postgres_img from "@/assets/post.svg";
+import dokcer_img from "@/assets/dk.svg";
+import aws_img from "@/assets/aws.svg";
+import pytest_img from "@/assets/pytest.svg";
+import github_img from "@/assets/gh.svg";
+import fastapi_img from "@/assets/fastapi.svg";
 
-    return (
-    <Box id="tecnologias" className="container-tecnologias" textAlign="center" flexWrap="wrap" gap="1">
-        <Text fontSize="28px" fontWeight="bold" color={{ 'base':'white','sm':'white','md':'white','lg':'white'}}> Tecnologías</Text>
-        <Box display="flex" alignItems="center" justifyContent="space-around" p="20px" flexWrap="wrap" gap="1" >
-            
-            <Box >
-                <Text fontSize="19px" color={{ 'base':'white','sm':'white','md':'white','lg':'white'}} fontWeight="bold">Backend</Text>
-                <Box>
-                    
-                    <Box display="flex" flexWrap="wrap" gap="1">
-                        <Image w={{'base':'50px','sm':'65px','md':'80px','lg':'100px'}} _hover={{scale:"1.04"}} mx="5px" alt="python_logo" title="Python" src={python_img}/>
-                        <Image w={{'base':'50px','sm':'65px','md':'80px','lg':'100px'}} _hover={{scale:"1.04"}} mx="5px" alt="django_logo" title="Django" src={dj_img}/>
-                        <Image w={{'base':'50px','sm':'65px','md':'80px','lg':'100px'}} _hover={{scale:"1.04"}} mx="5px" alt="fastapi_logo" title="FastAPI" src={fastapi_img}/>
-                    </Box>
-                </Box>
+function Tecnologias() {
+  return (
+    <Box
+      id="tecnologias"
+      position="relative"
+      overflow="hidden"
+      mt="-140px"
+      pt="180px"
+      pb="140px"
+      px={{ base: "20px", md: "60px", lg: "100px" }}
+    >
+      {/* TOP FADE */}
+      
+
+      {/* CONTINUOUS RIGHT GLOW */}
+      <Box
+        position="absolute"
+        top="-300px"
+        right="-250px"
+        w="700px"
+        h="700px"
+        bg="blue.500"
+        opacity="0.16"
+        filter="blur(190px)"
+      />
+
+      {/* CONTINUOUS LEFT GLOW */}
+      <Box
+        position="absolute"
+        bottom="-300px"
+        left="-250px"
+        w="700px"
+        h="700px"
+        bg="purple.500"
+        opacity="0.14"
+        filter="blur(190px)"
+      />
+
+      {/* GRID */}
+      <Box
+        position="absolute"
+        inset="0"
+        opacity="0.025"
+        backgroundImage="
+          linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)
+        "
+        backgroundSize="50px 50px"
+      />
+
+      {/* CONTENT */}
+      <Box position="relative" zIndex={2}>
+        <Text
+          textAlign="center"
+          fontSize={{ base: "42px", md: "56px" }}
+          fontWeight="black"
+          color="white"
+          mb="90px"
+          letterSpacing="-2px"
+        >
+          Tecnologías
+        </Text>
+
+        <Box
+          display="flex"
+          justifyContent="center"
+          flexWrap="wrap"
+          gap="30px"
+        >
+          {[
+            {
+              title: "Backend",
+              items: [python_img, dj_img, fastapi_img],
+            },
+            {
+              title: "Bases de datos",
+              items: [mysql_img, postgres_img],
+            },
+            {
+              title: "Infraestructura",
+              items: [dokcer_img, aws_img],
+            },
+            {
+              title: "Pruebas",
+              items: [pytest_img, github_img],
+            },
+          ].map((section) => (
+            <Box
+              key={section.title}
+              bg="rgba(255,255,255,0.03)"
+              border="1px solid rgba(255,255,255,0.08)"
+              backdropFilter="blur(14px)"
+              borderRadius="30px"
+              p="30px"
+              minW="250px"
+              boxShadow="0 0 40px rgba(0,0,0,0.28)"
+              transition="all 0.35s ease"
+              position="relative"
+              overflow="hidden"
+              _before={{
+                content: '""',
+                position: "absolute",
+                inset: "0",
+                background:
+                  "linear-gradient(180deg, rgba(255,255,255,0.04), transparent)",
+                opacity: 0.6,
+              }}
+              _hover={{
+                transform: "translateY(-8px)",
+                bg: "rgba(255,255,255,0.05)",
+                border: "1px solid rgba(255,255,255,0.12)",
+                boxShadow:
+                  "0 0 45px rgba(59,130,246,0.12)",
+              }}
+            >
+              <Text
+                color="white"
+                fontWeight="bold"
+                fontSize="24px"
+                mb="25px"
+                textAlign="center"
+                position="relative"
+                zIndex={2}
+              >
+                {section.title}
+              </Text>
+
+              <Box
+                display="flex"
+                justifyContent="center"
+                flexWrap="wrap"
+                gap="14px"
+                position="relative"
+                zIndex={2}
+              >
+                {section.items.map((img, index) => (
+                  <Box
+                    key={index}
+                    bg="rgba(255,255,255,0.04)"
+                    border="1px solid rgba(255,255,255,0.08)"
+                    borderRadius="22px"
+                    p="15px"
+                    transition="all 0.3s ease"
+                    backdropFilter="blur(10px)"
+                    _hover={{
+                      transform: "translateY(-4px) scale(1.04)",
+                      bg: "rgba(255,255,255,0.08)",
+                      border:
+                        "1px solid rgba(255,255,255,0.12)",
+                    }}
+                  >
+                    <Image
+                      src={img}
+                      w={{
+                        base: "60px",
+                        md: "75px",
+                        lg: "90px",
+                      }}
+                      userSelect="none"
+                      pointerEvents="none"
+                    />
+                  </Box>
+                ))}
+              </Box>
             </Box>
-            <Box>
-                <Text fontSize="19px" color={{ 'base':'white','sm':'white','md':'white','lg':'white'}} fontWeight="bold">Bases de datos</Text>
-                <Box>
-                    <Box display="flex" flexWrap="wrap" gap="1">
-                        <Image w={{'base':'50px','sm':'65px','md':'80px','lg':'100px'}} _hover={{scale:"1.04"}} alt="mysql_logo" title="Mysql" mx="5px" src={mysql_img}/>
-                        <Image w={{'base':'50px','sm':'65px','md':'80px','lg':'100px'}} _hover={{scale:"1.04"}} alt="postgres_logo" title="Postgresql" mx="5px" src={postgres_img}/>                    
-                    </Box>
-                </Box>
-            </Box>
-            <Box>
-                <Text fontSize="19px" color={{ 'base':'white','sm':'white','md':'white','lg':'white'}} fontWeight="bold">Infraestructura</Text>
-                <Box>
-                    <Box display="flex" flexWrap="wrap" gap="1">
-                        <Image w={{'base':'50px','sm':'65px','md':'80px','lg':'100px'}} _hover={{scale:"1.04"}} alt="docker_logo" title="Docker" mx="5px" src={dokcer_img}/>
-                        <Image w={{'base':'50px','sm':'65px','md':'80px','lg':'100px'}} _hover={{scale:"1.04"}} alt="aws_logo" title="Amazon Web Services" mx="5px" src={aws_img}/>                    
-                    </Box>
-                </Box>
-            </Box>
-            <Box>
-                <Text fontSize="19px" color={{ 'base':'white','sm':'white','md':'white','lg':'white'}} fontWeight="bold">Pruebas</Text>
-                <Box>
-                    <Box display="flex" flexWrap="wrap" gap="1">
-                        <Image w={{'base':'50px','sm':'65px','md':'80px','lg':'100px'}} _hover={{scale:"1.04"}} alt="pytest_logo" title="Pytest" mx="5px" src={pytest_img}/>
-                        <Image w={{'base':'50px','sm':'65px','md':'80px','lg':'100px'}} _hover={{scale:"1.04"}} alt="github_logo" title="Github Actions" mx="5px" src={github_img}/>
-                    </Box>
-                </Box>
-            </Box>
+          ))}
         </Box>
-       
-
+      </Box>
     </Box>
-)
+  );
 }
 
-export default tecnologias
+export default Tecnologias;

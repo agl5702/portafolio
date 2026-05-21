@@ -1,8 +1,63 @@
 .home-container {
-    background: radial-gradient(circle at 25% 25%, #006666 0%, transparent 40%), 
-                radial-gradient(circle at 75% 75%, #003f7f 0%, transparent 50%), 
-                linear-gradient(160deg, #1a1a1a, #0d0d0d, #111111);
+    
     margin: 0;
     background-attachment: fixed;
   }
-  
+
+  /* animations.css */
+
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes floatCard {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes floatCard2 {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
