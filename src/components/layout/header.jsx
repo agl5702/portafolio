@@ -180,8 +180,8 @@ function Header() {
         {/* RIGHT BUTTON */}
         <Button
           as="a"
-          href="/cvangel.docx"
-          download="CV_Angel.docx"
+          href="/cv.pdf"
+          download="cv.pdf"
           h="55px"
           px="28px"
           bg="green.300"
