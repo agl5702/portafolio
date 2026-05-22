@@ -7,45 +7,9 @@ function Contactos() {
       id="contactos"
       position="relative"
       overflow="hidden"
-      bg="#050816"
       py={{ base: "100px", md: "120px" }}
       px={{ base: "20px", md: "40px" }}
     >
-      {/* BACKGROUND GLOWS */}
-      <Box
-        position="absolute"
-        top="-250px"
-        right="-250px"
-        w="600px"
-        h="600px"
-        bg="blue.500"
-        opacity="0.18"
-        filter="blur(180px)"
-      />
-
-      <Box
-        position="absolute"
-        bottom="-250px"
-        left="-250px"
-        w="600px"
-        h="600px"
-        bg="purple.500"
-        opacity="0.16"
-        filter="blur(180px)"
-      />
-
-      {/* GRID EFFECT */}
-      <Box
-        position="absolute"
-        inset="0"
-        opacity="0.05"
-        backgroundImage="
-          linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)
-        "
-        backgroundSize="50px 50px"
-      />
-
       {/* CONTENT */}
       <Box position="relative" zIndex={2}>
         {/* TITLE */}
@@ -70,17 +34,13 @@ function Contactos() {
           lineHeight="1.9"
           mb="55px"
         >
-          ¿Tienes una idea, proyecto o propuesta?
-          Estoy disponible para colaborar en desarrollo backend,
-          APIs modernas y aplicaciones fullstack.
+          ¿Tienes una idea, proyecto o propuesta? Estoy disponible para
+          colaborar en desarrollo backend, APIs modernas y aplicaciones
+          fullstack.
         </Text>
 
         {/* SOCIAL ICONS */}
-        <HStack
-          justify="center"
-          spacing={{ base: 5, md: 8 }}
-          flexWrap="wrap"
-        >
+        <HStack justify="center" spacing={{ base: 5, md: 8 }} flexWrap="wrap">
           {/* GITHUB */}
           <Link
             href="https://github.com/agl5702"
