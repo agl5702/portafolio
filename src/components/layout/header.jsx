@@ -1,12 +1,4 @@
-import {
-  Box,
-  Text,
-  Image,
-  List,
-  Button,
-  Link,
-  HStack,
-} from "@chakra-ui/react";
+import { Box, Text, Image, List, Button, Link, HStack } from "@chakra-ui/react";
 
 import avatar from "@/assets/avataro.png";
 
@@ -59,13 +51,10 @@ function Header() {
         position="relative"
         zIndex={2}
       >
-
         {/* LEFT */}
         <HStack spacing={4}>
-
           {/* AVATAR GLOW */}
           <Box position="relative">
-
             <Box
               position="absolute"
               inset="-8px"
@@ -103,17 +92,14 @@ function Header() {
               letterSpacing="1px"
             >
               Angel
-              <Text
-                as="span"
-                color="green.300"
-                ml="3px"
-              >
+              <Text as="span" color="green.300" ml="3px">
                 Dev
               </Text>
             </Text>
 
             <Text
               color="gray.400"
+              mt="8px"
               fontSize={{
                 base: "11px",
                 md: "13px",
@@ -196,8 +182,7 @@ function Header() {
           _hover={{
             transform: "translateY(-3px)",
             bg: "green.200",
-            boxShadow:
-              "0 0 25px rgba(74, 222, 128, 0.35)",
+            boxShadow: "0 0 25px rgba(74, 222, 128, 0.35)",
           }}
         >
           Download CV
