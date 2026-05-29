@@ -1,14 +1,7 @@
-import {
-  Box,
-  Text,
-  Image,
-  Button,
-  Flex,
-  VStack,
-  HStack,
-} from "@chakra-ui/react";
+import { Text, Image, Button, Flex, VStack, HStack } from "@chakra-ui/react";
 
-import { FaPython, FaReact, FaGithub, FaDocker } from "react-icons/fa";
+import { FaPython, FaReact, FaGithub, FaDocker, FaAws } from "react-icons/fa";
+
 import { SiFastapi, SiPostgresql } from "react-icons/si";
 
 import img_angel from "@/assets/angel2.png";
@@ -19,77 +12,80 @@ function Home() {
   return (
     <Flex
       id="home"
-      minH="115vh"
+      minH="100vh"
       w="100%"
-      px={{ base: "20px", md: "60px", lg: "100px" }}
-      py={{ base: "120px", md: "0px" }}
+      px={{ base: "24px", md: "60px", lg: "100px" }}
+      pt={{ base: "130px", md: "120px", lg: "80px" }}
+      pb={{ base: "70px", md: "40px" }}
       align="center"
       justify="space-between"
       direction={{ base: "column", lg: "row" }}
+      gap={{ base: 16, lg: 2 }}
       position="relative"
+      overflow="hidden"
     >
       {/* LEFT CONTENT */}
       <VStack
+        flex="1"
         zIndex={2}
         align={{ base: "center", lg: "start" }}
-        spacing={6}
-        maxW="650px"
+        spacing={7}
+        maxW="580px"
+        mt="100px"
       >
         <Text
           color="green.300"
           fontWeight="bold"
-          fontSize={{ base: "16px", md: "20px" }}
-          letterSpacing="3px"
+          fontSize={{ base: "20px", md: "22px" }}
+          textAlign="center"
         >
-          FULLSTACK PYTHON / REACT
+          ANALISTA Y DESARROLLADOR DE SOFTWARE
         </Text>
 
-        <Text
-          color="white"
-          fontWeight="black"
-          lineHeight="0.95"
-          textAlign={{ base: "center", lg: "start" }}
-          fontSize={{ base: "60px", md: "85px", lg: "105px" }}
-        >
-          Ángel
-        </Text>
-
+        {/* DESCRIPTION */}
         <Text
           color="gray.300"
-          fontSize={{ base: "17px", md: "20px" }}
+          fontSize={{ base: "16px", md: "18px" }}
           textAlign="justify"
-          maxW="560px"
-          lineHeight="1.9"
+          maxW="520px"
         >
-          Backend developer specialized in scalable APIs, authentication
-          systems, business logic and modern full stack applications using
-          Python, FastAPI, Django, React and PostgreSQL.
+          Especializado en la construcción de soluciones web completas, desde el
+          análisis y diseño del sistema hasta el desarrollo, despliegue e
+          implementación. Trabajo principalmente con Python, FastAPI, Django,
+          React, PostgreSQL y tecnologías cloud/Linux, combinando desarrollo
+          backend, frontend, arquitectura de software e infraestructura.
         </Text>
 
         {/* TECH STACK */}
         <HStack
           spacing={5}
-          pt={2}
+          pt={1}
           flexWrap="wrap"
           justify={{ base: "center", lg: "start" }}
         >
-          <FaPython size={34} color="#3776AB" />
-          <SiFastapi size={34} color="#00C7B7" />
-          <FaReact size={34} color="#61DAFB" />
-          <FaGithub size={34} color="white" />
-          <SiPostgresql size={34} color="#336791" />
-          <FaDocker size={34} color="#2496ED" />
+          <FaPython size={32} color="#3776AB" />
+          <SiFastapi size={32} color="#00C7B7" />
+          <FaReact size={32} color="#61DAFB" />
+          <FaGithub size={32} color="white" />
+          <SiPostgresql size={32} color="#336791" />
+          <FaDocker size={32} color="#2496ED" />
+          <FaAws size={32} color="white" />
         </HStack>
 
         {/* BUTTONS */}
-        <HStack spacing={4} pt={4} flexWrap="wrap">
+        <HStack
+          spacing={4}
+          pt={3}
+          flexWrap="wrap"
+          justify={{ base: "center", lg: "start" }}
+        >
           <Button
             as="a"
             href="/cvangel.docx"
             download="CV_Angel.docx"
             size="lg"
             px={8}
-            h="60px"
+            h="58px"
             bg="green.300"
             color="black"
             fontWeight="bold"
@@ -110,7 +106,7 @@ function Home() {
             target="_blank"
             size="lg"
             px={8}
-            h="60px"
+            h="58px"
             color="white"
             bg="rgba(255,255,255,0.04)"
             border="1px solid rgba(255,255,255,0.10)"
@@ -134,17 +130,19 @@ function Home() {
         align="center"
         position="relative"
         zIndex={2}
-        mt={{ base: "80px", lg: "0px" }}
+        mt={{ base: "20px", lg: "0px" }}
+        mr={{ lg: "-40px" }}
       >
-        {/* IMAGE */}
         <Image
           src={img_angel}
           alt="Angel"
-          position="relative"
           objectFit="contain"
-          w={{ base: "360px", md: "520px", lg: "720px" }}
-          borderRadius="10px"
-          ml="30px"
+          w={{
+            base: "360px",
+            md: "520px",
+            lg: "760px",
+          }}
+          borderRadius="16px"
           filter="
             drop-shadow(0px 35px 70px rgba(0,0,0,0.55))
             drop-shadow(0px 0px 30px rgba(59,130,246,0.20))

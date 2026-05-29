@@ -96,18 +96,6 @@ function Header() {
                 Dev
               </Text>
             </Text>
-
-            <Text
-              color="gray.400"
-              mt="8px"
-              fontSize={{
-                base: "11px",
-                md: "13px",
-              }}
-              letterSpacing="2px"
-            >
-              FULLSTACK DEVELOPER
-            </Text>
           </Box>
         </HStack>
 

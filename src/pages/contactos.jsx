@@ -21,7 +21,7 @@ function Contactos() {
           lineHeight="1"
           mb="25px"
         >
-          Contactos
+          Contacto
         </Text>
 
         {/* DESCRIPTION */}
@@ -34,9 +34,9 @@ function Contactos() {
           lineHeight="1.9"
           mb="55px"
         >
-          ¿Tienes una idea, proyecto o propuesta? Estoy disponible para
-          colaborar en desarrollo backend, APIs modernas y aplicaciones
-          fullstack.
+          ¿Buscas construir una solución digital moderna? Estoy disponible para
+          colaborar en análisis, diseño, desarrollo e implementación de software
+          web escalable.
         </Text>
 
         {/* SOCIAL ICONS */}
