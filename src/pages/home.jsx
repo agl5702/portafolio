@@ -81,8 +81,8 @@ function Home() {
         >
           <Button
             as="a"
-            href="/cvangel.docx"
-            download="CV_Angel.docx"
+            href="/cv.pdf"
+            download="cv.pdf"
             size="lg"
             px={8}
             h="58px"
