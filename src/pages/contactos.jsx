@@ -50,16 +50,17 @@ function Contactos() {
             justifyContent="center"
             w={{ base: "78px", md: "90px" }}
             h={{ base: "78px", md: "90px" }}
-            bg="rgba(255,255,255,0.04)"
-            border="1px solid rgba(255,255,255,0.08)"
+            bg="rgba(255,255,255,0.02)"
+            border="1px solid rgba(255,255,255,0.12)"
             backdropFilter="blur(12px)"
             borderRadius="24px"
             color="white"
             transition="0.35s"
             _hover={{
               transform: "translateY(-6px)",
-              bg: "rgba(255,255,255,0.08)",
-              boxShadow: "0 0 30px rgba(255,255,255,0.12)",
+              bg: "rgba(255,255,255,0.06)",
+              border: "1px solid rgba(255,255,255,0.25)",
+              boxShadow: "0 0 30px rgba(255,255,255,0.2)",
             }}
           >
             <FaGithub size={38} />
@@ -74,16 +75,17 @@ function Contactos() {
             justifyContent="center"
             w={{ base: "78px", md: "90px" }}
             h={{ base: "78px", md: "90px" }}
-            bg="rgba(255,255,255,0.04)"
-            border="1px solid rgba(255,255,255,0.08)"
+            bg="rgba(255,255,255,0.02)"
+            border="1px solid rgba(255,255,255,0.12)"
             backdropFilter="blur(12px)"
             borderRadius="24px"
-            color="#0A66C2"
+            color="white"
             transition="0.35s"
             _hover={{
               transform: "translateY(-6px)",
-              bg: "rgba(255,255,255,0.08)",
-              boxShadow: "0 0 30px rgba(10,102,194,0.35)",
+              bg: "rgba(255,255,255,0.06)",
+              border: "1px solid rgba(255,255,255,0.25)",
+              boxShadow: "0 0 30px rgba(255,255,255,0.2)",
             }}
           >
             <FaLinkedin size={38} />
@@ -97,16 +99,17 @@ function Contactos() {
             justifyContent="center"
             w={{ base: "78px", md: "90px" }}
             h={{ base: "78px", md: "90px" }}
-            bg="rgba(255,255,255,0.04)"
-            border="1px solid rgba(255,255,255,0.08)"
+            bg="rgba(255,255,255,0.02)"
+            border="1px solid rgba(255,255,255,0.12)"
             backdropFilter="blur(12px)"
             borderRadius="24px"
-            color="green.300"
+            color="white"
             transition="0.35s"
             _hover={{
               transform: "translateY(-6px)",
-              bg: "rgba(255,255,255,0.08)",
-              boxShadow: "0 0 30px rgba(74,222,128,0.35)",
+              bg: "rgba(255,255,255,0.06)",
+              border: "1px solid rgba(255,255,255,0.25)",
+              boxShadow: "0 0 30px rgba(255,255,255,0.2)",
             }}
           >
             <FaEnvelope size={34} />

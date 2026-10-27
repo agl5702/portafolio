@@ -34,7 +34,7 @@ function Home() {
         mt="100px"
       >
         <Text
-          color="green.300"
+          color="white"
           fontWeight="bold"
           fontSize={{ base: "20px", md: "22px" }}
           textAlign="center"
@@ -63,12 +63,12 @@ function Home() {
           flexWrap="wrap"
           justify={{ base: "center", lg: "start" }}
         >
-          <FaPython size={32} color="#3776AB" />
-          <SiFastapi size={32} color="#00C7B7" />
-          <FaReact size={32} color="#61DAFB" />
+          <FaPython size={32} color="white" />
+          <SiFastapi size={32} color="white" />
+          <FaReact size={32} color="white" />
           <FaGithub size={32} color="white" />
-          <SiPostgresql size={32} color="#336791" />
-          <FaDocker size={32} color="#2496ED" />
+          <SiPostgresql size={32} color="white" />
+          <FaDocker size={32} color="white" />
           <FaAws size={32} color="white" />
         </HStack>
 
@@ -81,41 +81,22 @@ function Home() {
         >
           <Button
             as="a"
-            href="/cv.pdf"
-            download="cv.pdf"
-            size="lg"
-            px={8}
-            h="58px"
-            bg="green.300"
-            color="black"
-            fontWeight="bold"
-            borderRadius="18px"
-            transition="0.3s"
-            _hover={{
-              transform: "translateY(-3px)",
-              bg: "green.200",
-              boxShadow: "0 0 25px rgba(74, 222, 128, 0.35)",
-            }}
-          >
-            Download CV
-          </Button>
-
-          <Button
-            as="a"
             href="https://github.com/agl5702"
             target="_blank"
             size="lg"
             px={8}
             h="58px"
             color="white"
-            bg="rgba(255,255,255,0.04)"
-            border="1px solid rgba(255,255,255,0.10)"
+            bg="rgba(255,255,255,0.02)"
+            border="1px solid rgba(255,255,255,0.15)"
             backdropFilter="blur(10px)"
             borderRadius="18px"
             transition="0.3s"
             _hover={{
-              bg: "rgba(255,255,255,0.08)",
+              bg: "rgba(255,255,255,0.06)",
+              border: "1px solid rgba(255,255,255,0.3)",
               transform: "translateY(-3px)",
+              boxShadow: "0 0 20px rgba(255,255,255,0.15)",
             }}
           >
             GitHub
@@ -144,12 +125,16 @@ function Home() {
           }}
           borderRadius="16px"
           filter="
-            drop-shadow(0px 35px 70px rgba(0,0,0,0.55))
-            drop-shadow(0px 0px 30px rgba(59,130,246,0.20))
+            drop-shadow(0px 40px 80px rgba(0,0,0,0.9))
+            drop-shadow(0px 0px 40px rgba(255,255,255,0.15))
           "
           transition="all 0.4s ease"
           _hover={{
             transform: "scale(1.02)",
+            filter: `
+              drop-shadow(0px 40px 80px rgba(0,0,0,0.9))
+              drop-shadow(0px 0px 50px rgba(255,255,255,0.25))
+            `,
           }}
           userSelect="none"
           pointerEvents="none"

@@ -12,10 +12,10 @@ function Header() {
       left="0"
       w="100%"
       zIndex="999"
-      bg="rgba(5, 8, 22, 0.72)"
+      bg="rgba(0, 0, 0, 0.85)"
       backdropFilter="blur(14px)"
-      borderBottom="1px solid rgba(255,255,255,0.06)"
-      boxShadow="0 10px 40px rgba(0,0,0,0.25)"
+      borderBottom="1px solid rgba(255,255,255,0.1)"
+      boxShadow="0 10px 40px rgba(0,0,0,0.5)"
     >
       {/* BACKGROUND GLOW */}
       <Box
@@ -24,8 +24,8 @@ function Header() {
         right="-100px"
         w="250px"
         h="250px"
-        bg="blue.500"
-        opacity="0.12"
+        bg="white"
+        opacity="0.08"
         filter="blur(120px)"
       />
 
@@ -35,8 +35,8 @@ function Header() {
         left="-100px"
         w="250px"
         h="250px"
-        bg="purple.500"
-        opacity="0.1"
+        bg="white"
+        opacity="0.06"
         filter="blur(120px)"
       />
 
@@ -58,8 +58,8 @@ function Header() {
             <Box
               position="absolute"
               inset="-8px"
-              bg="green.300"
-              opacity="0.25"
+              bg="white"
+              opacity="0.15"
               filter="blur(20px)"
               borderRadius="full"
             />
@@ -68,7 +68,7 @@ function Header() {
               src={avatar}
               w={{ base: "60px", md: "72px" }}
               borderRadius="full"
-              border="2px solid rgba(255,255,255,0.08)"
+              border="2px solid rgba(255,255,255,0.15)"
               bg="rgba(255,255,255,0.04)"
               backdropFilter="blur(10px)"
               transition="0.3s"
@@ -92,7 +92,7 @@ function Header() {
               letterSpacing="1px"
             >
               Angel
-              <Text as="span" color="green.300" ml="3px">
+              <Text as="span" color="gray.300" ml="3px">
                 Dev
               </Text>
             </Text>
@@ -126,15 +126,15 @@ function Header() {
                 textDecoration="none"
                 transition="0.3s"
                 _hover={{
-                  color: "green.300",
+                  color: "white",
                   textDecoration: "none",
                 }}
                 _after={{
                   content: '""',
                   position: "absolute",
                   width: "0%",
-                  height: "2px",
-                  bg: "green.300",
+                  height: "1px",
+                  bg: "white",
                   left: "0",
                   bottom: "-6px",
                   transition: "0.3s",
@@ -152,29 +152,7 @@ function Header() {
         </List.Root>
 
         {/* RIGHT BUTTON */}
-        <Button
-          as="a"
-          href="/cv.pdf"
-          download="cv.pdf"
-          h="55px"
-          px="28px"
-          bg="green.300"
-          color="black"
-          fontWeight="bold"
-          borderRadius="18px"
-          display={{
-            base: "none",
-            lg: "flex",
-          }}
-          transition="0.3s"
-          _hover={{
-            transform: "translateY(-3px)",
-            bg: "green.200",
-            boxShadow: "0 0 25px rgba(74, 222, 128, 0.35)",
-          }}
-        >
-          Download CV
-        </Button>
+        <Box display={{ base: "none", lg: "block" }} w="150px" />
       </Box>
     </Box>
   );

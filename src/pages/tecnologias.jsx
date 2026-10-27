@@ -111,25 +111,25 @@ function Tecnologias() {
               overflow="hidden"
               borderRadius="30px"
               p={{ base: "22px", md: "28px" }}
-              bg="rgba(255,255,255,0.03)"
-              border="1px solid rgba(255,255,255,0.08)"
+              bg="rgba(255,255,255,0.02)"
+              border="1px solid rgba(255,255,255,0.12)"
               backdropFilter="blur(16px)"
               transition="all .35s ease"
-              boxShadow="0 10px 40px rgba(0,0,0,0.20)"
+              boxShadow="0 10px 40px rgba(0,0,0,0.5)"
               minH="100%"
               _before={{
                 content: '""',
                 position: "absolute",
                 inset: "0",
                 background:
-                  "linear-gradient(180deg, rgba(255,255,255,0.05), transparent)",
-                opacity: 0.7,
+                  "linear-gradient(180deg, rgba(255,255,255,0.08), transparent)",
+                opacity: 0.8,
               }}
               _hover={{
                 transform: "translateY(-8px)",
-                border: "1px solid rgba(255,255,255,0.12)",
-                bg: "rgba(255,255,255,0.045)",
-                boxShadow: "0 0 50px rgba(59,130,246,0.12)",
+                border: "1px solid rgba(255,255,255,0.25)",
+                bg: "rgba(255,255,255,0.05)",
+                boxShadow: "0 0 60px rgba(255,255,255,0.15)",
               }}
             >
               <Text
@@ -171,14 +171,14 @@ function Tecnologias() {
                     minH={{ base: "125px", md: "145px" }}
                     p={{ base: "14px", md: "18px" }}
                     borderRadius="24px"
-                    bg="rgba(255,255,255,0.04)"
-                    border="1px solid rgba(255,255,255,0.08)"
+                    bg="rgba(255,255,255,0.02)"
+                    border="1px solid rgba(255,255,255,0.1)"
                     backdropFilter="blur(10px)"
                     transition="all .3s ease"
                     _hover={{
                       transform: "translateY(-4px) scale(1.03)",
-                      bg: "rgba(255,255,255,0.08)",
-                      border: "1px solid rgba(255,255,255,0.14)",
+                      bg: "rgba(255,255,255,0.06)",
+                      border: "1px solid rgba(255,255,255,0.2)",
                     }}
                   >
                     <Image

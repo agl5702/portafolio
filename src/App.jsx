@@ -12,7 +12,7 @@ const Contactos = lazy(() => import("./pages/contactos"));
 
 function App() {
   return (
-    <Box bg="#050816" minH="100vh" position="relative" overflow="hidden">
+    <Box bg="black" minH="100vh" position="relative" overflow="hidden">
       {/* ATMÓSFERA GLOBAL */}
       <Box
         position="fixed"
@@ -21,17 +21,17 @@ function App() {
         pointerEvents="none"
         backgroundImage={`
           radial-gradient(
-            circle at 78% 30%,
-            rgba(59,130,246,0.18) 0%,
-            rgba(59,130,246,0.07) 18%,
-            rgba(5,8,22,0) 58%
+            circle at 70% 20%,
+            rgba(255,255,255,0.08) 0%,
+            rgba(255,255,255,0.03) 25%,
+            rgba(0,0,0,0) 60%
           ),
 
           radial-gradient(
-            circle at 10% 110%,
-            rgba(168,85,247,0.15) 0%,
-            rgba(168,85,247,0.06) 16%,
-            rgba(5,8,22,0) 52%
+            circle at 20% 90%,
+            rgba(255,255,255,0.06) 0%,
+            rgba(255,255,255,0.02) 20%,
+            rgba(0,0,0,0) 50%
           )
         `}
       />
@@ -41,13 +41,13 @@ function App() {
         position="fixed"
         inset="0"
         zIndex={0}
-        opacity="0.03"
+        opacity="0.05"
         pointerEvents="none"
         backgroundImage={`
-          linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)
+          linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)
         `}
-        backgroundSize="50px 50px"
+        backgroundSize="60px 60px"
       />
 
       {/* CONTENIDO */}

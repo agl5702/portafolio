@@ -55,15 +55,15 @@ export default function CardProyect({
     >
       {/* Tarjeta exterior */}
       <Card.Root
-        _hover={{ transform: "scale(1.005)", boxShadow: "lg" }}
+        _hover={{ transform: "scale(1.005)", boxShadow: "0 20px 60px rgba(0,0,0,0.8), 0 0 40px rgba(255,255,255,0.1)" }}
         mx="10px"
-        bg="white"
+        bg="linear-gradient(145deg, rgba(20,20,20,0.95) 0%, rgba(0,0,0,0.98) 100%)"
         maxW="xl"
         overflow="hidden"
         border="1px solid"
-        borderColor="gray.200"
-        transition="all 0.2s ease"
-        boxShadow="md"
+        borderColor="rgba(255,255,255,0.15)"
+        transition="all 0.3s ease"
+        boxShadow="0 10px 40px rgba(0,0,0,0.7)"
       >
         <Dialog.Trigger asChild>
           <Box position="relative" w="100%">
@@ -81,10 +81,10 @@ export default function CardProyect({
         </Dialog.Trigger>
 
         <Card.Body gap={3} p={5}>
-          <Card.Title color="blue.800" fontSize="xl" fontWeight="bold">
+          <Card.Title color="white" fontSize="xl" fontWeight="bold">
             {title}
           </Card.Title>
-          <Card.Description fontSize="md" color="gray.600">
+          <Card.Description fontSize="md" color="gray.400">
             {description}
           </Card.Description>
 
@@ -100,15 +100,19 @@ export default function CardProyect({
         <Card.Footer p={5} pt={0}>
           <Link
             href={link_button}
-            bg="blue.400"
+            bg="linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(200,200,200,0.9) 100%)"
             p={3}
             textDecoration="none"
-            color="white"
-            _hover={{ bg: "blue.600", transform: "translateY(-1px)" }}
+            color="black"
+            _hover={{ 
+              bg: "white", 
+              transform: "translateY(-2px)",
+              boxShadow: "0 0 20px rgba(255,255,255,0.3)"
+            }}
             borderRadius="md"
-            fontWeight="medium"
+            fontWeight="semibold"
             display="inline-block"
-            transition="all 0.2s ease"
+            transition="all 0.3s ease"
             width="100%"
             textAlign="center"
           >
